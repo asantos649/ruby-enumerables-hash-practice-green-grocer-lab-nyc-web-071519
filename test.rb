@@ -50,7 +50,7 @@ def apply_coupons(cart, coupons)
     while coupons[counter] do
       if coupons[counter][:item] == key
         new_hash[key][:count] -= coupons[counter][:num]
-        new_hash = "#{key} W/COUPON"
+        new_hash["#{key} W/COUPON"]= {}
         return new_hash
       end 
     end 
