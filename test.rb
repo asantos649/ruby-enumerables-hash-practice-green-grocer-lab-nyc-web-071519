@@ -41,7 +41,7 @@ end
 
 new_cart = consolidate_cart(first_list)
 
-puts new_cart
+#puts new_cart
 
 def apply_coupons(cart, coupons)
   new_hash = cart
@@ -53,7 +53,7 @@ def apply_coupons(cart, coupons)
   }
 end
 
-#puts apply_coupons(new_cart, coupon)
+puts apply_coupons(new_cart, coupon)
 
 def apply_clearance(cart)
   # code here
