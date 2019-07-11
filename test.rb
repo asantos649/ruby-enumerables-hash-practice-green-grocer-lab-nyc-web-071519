@@ -50,6 +50,8 @@ def apply_coupons(cart, coupons)
     while coupons[counter] do
       if coupons[counter][:item] == key
         return key
+      end 
+    end 
   }
 end
 
