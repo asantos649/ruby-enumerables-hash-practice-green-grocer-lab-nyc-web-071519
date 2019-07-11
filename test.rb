@@ -51,7 +51,7 @@ def apply_coupons(cart, coupons)
     while coupons[counter] do
       if coupons[counter][:item] == key
         new_hash[key][:count] -= coupons[counter][:num]
-        coupon_list["#{key} W/COUPON"]= {:price => coupons[counter][:cost]/coupons[counter][:num], :clearance => new_hash[key][:clearance]}#, :count => coupons[counter][:num]}
+        coupon_list["#{key} W/COUPON"]= {:price => coupons[counter][:cost]/coupons[counter][:num], :clearance => new_hash[key][:clearance], :count => coupons[counter][:num]}
         return coupon_list
       end 
     end 
