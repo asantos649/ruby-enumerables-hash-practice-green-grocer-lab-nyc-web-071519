@@ -48,7 +48,7 @@ def apply_coupons(cart, coupons)
   new_hash.each {|key, value|}
 end
 
-puts apply_coupons(new_cart, coupon)
+#puts apply_coupons(new_cart, coupon)
 
 def apply_clearance(cart)
   # code here
