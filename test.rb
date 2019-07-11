@@ -45,7 +45,7 @@ puts new_cart
 
 def apply_coupons(cart, coupons)
   new_hash = cart
-  new_hash.each {|key, value|
+  new_hash.each {|key, value|}
 end
 
 puts apply_coupons(new_cart, coupon)
