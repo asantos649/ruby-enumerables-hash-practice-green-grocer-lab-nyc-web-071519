@@ -45,12 +45,13 @@ new_cart = consolidate_cart(first_list)
 
 def apply_coupons(cart, coupons)
   new_hash = cart
+  coupon_list = {}
   cart.each {|key, value|
     counter = 0
     while coupons[counter] do
       if coupons[counter][:item] == key
         new_hash[key][:count] -= coupons[counter][:num]
-        new_hash["#{key} W/COUPON"]= {}
+        coupon_list["#{key} W/COUPON"]= {}
         return new_hash
       end 
     end 
