@@ -39,37 +39,13 @@ def consolidate_cart(cart)
   return new_hash
 end
 
-new_cart =  consolidate_cart(first_list)
+new_cart = consolidate_cart(first_list)
+
+puts new_cart
 
 def apply_coupons(cart, coupons)
   new_hash = cart
-  count = 0
-  temp_array = []
-  coupons.map {|discount|
-    cart.each {|key, value|
-      if discount[:item] == key
-        temp_array.push(discount)
- #       return new_hash[key][:count] 
-        if new_hash[key][:count] < discount[:num]
-          new_hash[key][:count] = 0
-        else
-          new_hash[key][:count] -= discount[:num]
-        end
-      end
-    count += 1  
-    }
-  }
-  new_hash
-  
-  
-  
-  
-  
-  
-#  temp_array.map{|coup|
-#    new_hash["#{coup[:item]} /W COUPON"] = {:price => 0, :clearance => false, :count => 0}
-#  }
-  return new_hash
+  new_hash.each {|key, value|
 end
 
 puts apply_coupons(new_cart, coupon)
