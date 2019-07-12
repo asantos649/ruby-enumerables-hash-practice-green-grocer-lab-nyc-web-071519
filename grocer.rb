@@ -51,7 +51,7 @@ end
 def apply_clearance(cart)
   cart.each{|key, value|
     if cart[key][:clearance]
-      cart[key][:price] = 0.8*cart[key][:price]
+      cart[key][:price] = 0.8*cart[key][:price].to_int
     end
   }
   return cart
