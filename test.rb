@@ -34,11 +34,10 @@ def consolidate_cart(cart)
     }
     counter += 1
   end 
-  return cart
   new_hash.each {|key, value|
     value[:count] = 0
   }
-  
+  return cart
   counter2 = 0
   while counter2 < cart.length do
     return cart
