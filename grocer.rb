@@ -64,6 +64,8 @@ def checkout(cart, coupons)
   new_cart3 = apply_clearance(new_cart2)
   new_cart3.each{|key,value
     sum += (new_cart3[key][:price]*new_cart3[key][:count])
+  }
+  return sum
 end
 
 
