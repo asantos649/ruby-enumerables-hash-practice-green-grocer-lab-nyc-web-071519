@@ -21,10 +21,10 @@ coupon = [
     ]
 
 def consolidate_cart(cart)
-  return cart
   temp_cart = cart.uniq 
   new_hash={}
   counter=0
+  return cart
   while temp_cart[counter] do
     cart.map {|item|
       if temp_cart[counter].keys == item.keys
