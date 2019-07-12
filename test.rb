@@ -21,6 +21,7 @@ coupon = [
     ]
 
 def consolidate_cart(cart)
+  return cart
   temp_cart = cart.uniq 
   new_hash={}
   counter=0
