@@ -6,7 +6,7 @@ first_list =     [
       {"TEMPEH" => {:price => 3.00, :clearance => false}},
       {"CHEESE" => {:price => 6.50, :clearance => false}},
       {"BEER" => {:price => 13.00, :clearance => false}},
-      {"BEER" => {:price => 13.00, :clearance => false}},
+      {"BEER" => {:price => 23.00, :clearance => false}},
       {"PEANUTBUTTER" => {:price => 3.00, :clearance => false}},
       {"BEETS" => {:price => 2.50, :clearance => false}},
       {"SOY MILK" => {:price => 4.50, :clearance => false}}
