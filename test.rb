@@ -5,7 +5,7 @@ first_list =     [
       {"ALMONDS" => {:price => 10.00, :clearance => false}},
       {"TEMPEH" => {:price => 3.00, :clearance => false}},
       {"CHEESE" => {:price => 6.00, :clearance => false}},
-      {"BEER" => {:price => 13.00, :clearance => false}},
+#      {"BEER" => {:price => 13.00, :clearance => false}},
       {"BEER" => {:price => 13.00, :clearance => false}},
       {"PEANUTBUTTER" => {:price => 3.00, :clearance => false}},
 #      {"BEETS" => {:price => 2.00, :clearance => false}},
