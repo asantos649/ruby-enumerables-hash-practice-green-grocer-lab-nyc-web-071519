@@ -69,7 +69,7 @@ def apply_coupons(cart, coupons)
   new_hash.merge(coupon_list)
 end
 
-apply_coupons(first_list, coupon)
+puts apply_coupons(first_list, coupon)
 
 
 def apply_clearance(cart)
