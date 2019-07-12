@@ -87,7 +87,7 @@ def checkout(cart, coupons)
   return sum
 end
 
-puts checkout(first_cart, coupon)
+puts checkout(first_list, coupon)
 
 
 
