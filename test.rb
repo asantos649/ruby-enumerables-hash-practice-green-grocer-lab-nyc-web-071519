@@ -12,9 +12,9 @@ first_list =     [
     ]
 
 coupon = [
-      {:item => "AAVOCADO", :num => 2, :cost => 5.00},
-      {:item => "ABEER", :num => 2, :cost => 20.00},
-      {:item => "ACHEESE", :num => 3, :cost => 15.00}
+      {:item => "AVOCADO", :num => 2, :cost => 5.00},
+      {:item => "BEER", :num => 2, :cost => 20.00},
+      {:item => "CHEESE", :num => 3, :cost => 15.00}
     ]
 
 def consolidate_cart(cart)
