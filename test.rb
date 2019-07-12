@@ -42,7 +42,7 @@ def consolidate_cart(cart)
   while cart[counter2] do
     new_hash.each {|key2, value2|
     string = cart[counter2].keys
-    #return key2
+    return string
       if string == key2
         value2[:count] += 1
       end 
