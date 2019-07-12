@@ -45,7 +45,7 @@ def consolidate_cart(cart)
    # return string
    #   if string == key2
         #value2[:count] += 1
-      end 
+  #    end 
       counter2 +=1 
     }
   end 
