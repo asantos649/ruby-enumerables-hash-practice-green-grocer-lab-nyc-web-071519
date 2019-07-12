@@ -69,6 +69,9 @@ def apply_coupons(cart, coupons)
   new_hash.merge(coupon_list)
 end
 
+apply_coupons(first_list, coupon)
+
+
 def apply_clearance(cart)
   cart.each{|key, value|
     if cart[key][:clearance]
