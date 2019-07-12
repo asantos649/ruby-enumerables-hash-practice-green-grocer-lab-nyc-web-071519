@@ -11,7 +11,11 @@ first_list =     [
       {"SOY MILK" => {:price => 4.50, :clearance => true}}
     ]
 
-coupon = [{:item => "AVOCADO", :num => 2, :cost => 5.00}]
+coupon = [
+      {:item => "AVOCADO", :num => 2, :cost => 5.00},
+      {:item => "BEER", :num => 2, :cost => 20.00},
+      {:item => "CHEESE", :num => 3, :cost => 15.00}
+    ]
 
 def consolidate_cart(cart)
   temp_cart = cart.uniq 
@@ -83,7 +87,7 @@ def checkout(cart, coupons)
   return sum
 end
 
-
+puts checkout(first_cart, coupon)
 
 
 
