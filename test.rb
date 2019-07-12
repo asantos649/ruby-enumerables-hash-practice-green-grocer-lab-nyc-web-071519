@@ -33,15 +33,8 @@ def consolidate_cart(cart)
       counter2 +=1 
     }
   end 
-  
-  
-  
   return new_hash
 end
-
-new_cart = consolidate_cart(first_list)
-
-#puts new_cart
 
 def apply_coupons(cart, coupons)
   new_hash = cart
@@ -51,9 +44,11 @@ def apply_coupons(cart, coupons)
     while coupons[counter] do
       if coupons[counter][:item] == key
         new_hash[key][:count] -= coupons[counter][:num]
-        coupon_list["#{key} W/COUPON"]= {:price => coupons[counter][:cost]/coupons[counter][:num], :clearance => new_hash[key][:clearance], :count => coupons[counter][:num]}
-        
-       # return coupon_list
+        if coupon_list["#{key} W/COUPON"]
+          coupon_list["#{key} W/COUPON"][:count] += coupons[counter][:num]
+        else
+          coupon_list["#{key} W/COUPON"]= {:price => coupons[counter][:cost]/coupons[counter][:num], :clearance => new_hash[key][:clearance], :count => coupons[counter][:num]}
+        end 
       end
       counter +=1 
     end 
@@ -61,12 +56,31 @@ def apply_coupons(cart, coupons)
   new_hash.merge(coupon_list)
 end
 
-puts apply_coupons(new_cart, coupon)
-
 def apply_clearance(cart)
-  # code here
+  cart.each{|key, value|
+    if cart[key][:clearance]
+      cart[key][:price] = (0.8 * cart[key][:price]).round(2)
+    end
+  }
+  return cart
 end
 
 def checkout(cart, coupons)
-  # code here
+  sum = 0
+  new_cart1 = consolidate_cart(cart)
+  new_cart2 = apply_coupons(new_cart1, coupons)
+  new_cart3 = apply_clearance(new_cart2)
+  new_cart3.each{|key,value|
+    sum += (new_cart3[key][:price]*new_cart3[key][:count])
+  }
+  return sum
 end
+
+
+
+
+
+
+
+
+
